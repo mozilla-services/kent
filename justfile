@@ -6,8 +6,8 @@ devenv:
     uv sync --extra dev --refresh --upgrade
 
 # Run tests and linting
-test: devenv
-    tox
+test *args: devenv
+    uv run tox {{args}}
 
 # Format files
 format: devenv
@@ -19,6 +19,7 @@ lint: devenv
 
 # Wipe dev environment and build artifacts
 clean:
+    rm -rf uv.lock .venv
     rm -rf build dist src/kent.egg-info .tox .pytest_cache
     find src/ -name __pycache__ | xargs rm -rf
     find src/ -name '*.pyc' | xargs rm -rf
