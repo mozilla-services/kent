@@ -11,11 +11,11 @@ test *args: devenv
 
 # Format files
 format: devenv
-    uv run tox exec -e py39-lint -- ruff format
+    uv run tox exec -e py310-lint -- ruff format
 
 # Lint files
 lint: devenv
-    uv run tox -e py39-lint
+    uv run tox -e py310-lint
 
 # Wipe dev environment and build artifacts
 clean:
