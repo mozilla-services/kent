@@ -2,6 +2,20 @@
 HISTORY
 =======
 
+2.2.0 (October 13th, 2025)
+==========================
+
+Backwards incompatible changes:
+
+* Dropped support for Python 3.9. (#108)
+
+Changes:
+
+* Add support for Python 3.14. (#109)
+
+* Rework development to use uv and just.
+
+
 2.1.0 (October 25th, 2024)
 ==========================
 
