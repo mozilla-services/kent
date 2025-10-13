@@ -1,4 +1,4 @@
-FROM python:3.11.5-slim-bookworm
+FROM python:3.13-slim-bookworm
 
 WORKDIR /app/
 
@@ -11,7 +11,7 @@ RUN groupadd -r kent && useradd --no-log-init -r -g kent kent
 # realzies, you probably don't want to do this because Kent could change and
 # break all your stuff. Pick a specific commit or tag.
 RUN pip install -U 'pip>=8' && \
-    pip install --no-cache-dir 'https://github.com/willkg/kent/archive/refs/heads/main.zip'
+    pip install --no-cache-dir 'https://github.com/mozilla-services/kent/archive/refs/heads/main.zip'
 
 USER kent
 
