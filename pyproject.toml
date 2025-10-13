@@ -18,10 +18,11 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
-urls.Homepage = "https://github.com/willkg/kent/"
-urls.Source = "https://github.com/willkg/kent/"
-urls.Issues = "https://github.com/willkg/kent/issues"
+urls.Homepage = "https://github.com/mozilla-services/kent/"
+urls.Source = "https://github.com/mozilla-services/kent/"
+urls.Issues = "https://github.com/mozilla-services/kent/issues"
 
 [project.scripts]
 kent-server = "kent.cli_server:main"
@@ -82,6 +83,7 @@ envlist =
     py311
     py312
     py313
+    py314
 uv_python_preference = only-managed
 
 [gh-actions]
@@ -90,6 +92,7 @@ python =
     3.11: py311
     3.12: py312
     3.13: py313
+    3.14: py314
 
 [testenv]
 extras = dev
