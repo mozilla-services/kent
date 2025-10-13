@@ -46,7 +46,7 @@ Running in a Docker container
 
 I'm using something like this::
 
-    FROM python:3.11.5-slim-bookworm
+    FROM python:3.13-slim-bookworm
 
     WORKDIR /app/
 
@@ -55,9 +55,6 @@ I'm using something like this::
 
     RUN groupadd -r kent && useradd --no-log-init -r -g kent kent
 
-    # NOTE(willkg): This installs Kent from main tip. If you're using Kent for
-    # realzies, you probably don't want to do this because Kent could change and
-    # break all your stuff. Pick a specific commit or tag.
     RUN pip install -U 'pip>=8' && \
         pip install --no-cache-dir 'kent==<VERSION>'
 
