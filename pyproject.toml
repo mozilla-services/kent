@@ -5,13 +5,12 @@ version = "2.2.0"
 readme = "README.rst"
 keywords = ["sentry", "integration service", "test"]
 authors = [{name = "Will Kahn-Greene"}]
-license = {text = "MPLv2"}
+license = "MPL-2.0"
 requires-python = ">=3.10"
 dependencies = ["flask>3"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
@@ -44,8 +43,7 @@ dev = [
 
 
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
+requires = ["setuptools>=80", "setuptools-scm[simple]>=8"]
 
 
 [tool.ruff]
